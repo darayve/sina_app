@@ -1,0 +1,22 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - always_declare_return_types
+    - avoid_dynamic_calls
+    - cancel_subscriptions
+    - close_sinks
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - unnecessary_this
+    - prefer_final_in_for_each
+    - prefer_final_locals
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-raw-types: true
+    strict-inference: true
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
