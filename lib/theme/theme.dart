@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'color_scheme.dart';
-import 'sina_tokens.dart';
+import 'package:sina_app/theme/text_theme.dart';
+import 'package:sina_app/theme/color_scheme.dart';
+import 'package:sina_app/theme/sina_tokens.dart';
 
 ThemeData sinaLightTheme() {
   final colorScheme = sinaColorSchemeLight();
@@ -10,7 +10,7 @@ ThemeData sinaLightTheme() {
     useMaterial3: true,
     colorScheme: colorScheme,
     extensions: [SinaTokens.light()],
-    // TODO: textTheme
+    textTheme: sinaTextTheme(),
     // TODO: temas de componente (filledButtonTheme, chipTheme, etc.)
   );
 }
@@ -22,7 +22,7 @@ ThemeData sinaDarkTheme() {
     useMaterial3: true,
     colorScheme: colorScheme,
     extensions: [SinaTokens.dark()],
-    // TODO: textTheme
+    textTheme: sinaTextTheme(),
     // TODO: temas de componente (filledButtonTheme, chipTheme, etc.)
   );
 }

@@ -25,6 +25,11 @@ class SinaTokens extends ThemeExtension<SinaTokens> {
     required this.disabledContent,
     required this.disabledContainer,
     required this.iconDim,
+    required this.labelSection,
+    required this.captionLg,
+    required this.captionSm,
+    required this.numberList,
+    required this.numberStat,
   });
 
   final Color projectionBorder;
@@ -47,6 +52,11 @@ class SinaTokens extends ThemeExtension<SinaTokens> {
   final double disabledContent;
   final double disabledContainer;
   final double iconDim;
+  final TextStyle labelSection;
+  final TextStyle captionLg;
+  final TextStyle captionSm;
+  final TextStyle numberList;
+  final TextStyle numberStat;
 
   factory SinaTokens.light() {
     final colorScheme = sinaColorSchemeLight();
@@ -72,6 +82,39 @@ class SinaTokens extends ThemeExtension<SinaTokens> {
       disabledContent: 0.38,
       disabledContainer: 0.12,
       iconDim: 0.55,
+      labelSection: const TextStyle(
+        fontFamily: 'InstrumentSans',
+        fontWeight: FontWeight.w500,
+        fontSize: 11,
+        height: 1.0,
+        letterSpacing: 1.32,
+      ),
+      captionLg: const TextStyle(
+        fontFamily: 'InstrumentSans',
+        fontWeight: FontWeight.w400,
+        fontSize: 12,
+        height: 1.4,
+      ),
+      captionSm: const TextStyle(
+        fontFamily: 'InstrumentSans',
+        fontWeight: FontWeight.w400,
+        fontSize: 11,
+        height: 1.4,
+      ),
+      numberList: const TextStyle(
+        fontFamily: 'SpaceGrotesk',
+        fontWeight: FontWeight.w600,
+        fontSize: 15,
+        height: 1.1,
+        fontFeatures: [FontFeature.tabularFigures()],
+      ),
+      numberStat: const TextStyle(
+        fontFamily: 'SpaceGrotesk',
+        fontWeight: FontWeight.w600,
+        fontSize: 19,
+        height: 1.1,
+        fontFeatures: [FontFeature.tabularFigures()],
+      ),
     );
   }
 
@@ -99,6 +142,39 @@ class SinaTokens extends ThemeExtension<SinaTokens> {
       disabledContent: 0.38,
       disabledContainer: 0.12,
       iconDim: 0.55,
+      labelSection: const TextStyle(
+        fontFamily: 'InstrumentSans',
+        fontWeight: FontWeight.w500,
+        fontSize: 11,
+        height: 1.0,
+        letterSpacing: 1.32,
+      ),
+      captionLg: const TextStyle(
+        fontFamily: 'InstrumentSans',
+        fontWeight: FontWeight.w400,
+        fontSize: 12,
+        height: 1.4,
+      ),
+      captionSm: const TextStyle(
+        fontFamily: 'InstrumentSans',
+        fontWeight: FontWeight.w400,
+        fontSize: 11,
+        height: 1.4,
+      ),
+      numberList: const TextStyle(
+        fontFamily: 'SpaceGrotesk',
+        fontWeight: FontWeight.w600,
+        fontSize: 15,
+        height: 1.1,
+        fontFeatures: [FontFeature.tabularFigures()],
+      ),
+      numberStat: const TextStyle(
+        fontFamily: 'SpaceGrotesk',
+        fontWeight: FontWeight.w600,
+        fontSize: 19,
+        height: 1.1,
+        fontFeatures: [FontFeature.tabularFigures()],
+      ),
     );
   }
 
@@ -124,6 +200,11 @@ class SinaTokens extends ThemeExtension<SinaTokens> {
     double? disabledContent,
     double? disabledContainer,
     double? iconDim,
+    TextStyle? labelSection,
+    TextStyle? captionLg,
+    TextStyle? captionSm,
+    TextStyle? numberList,
+    TextStyle? numberStat,
   }) {
     return SinaTokens(
       projectionBorder: projectionBorder ?? this.projectionBorder,
@@ -147,6 +228,11 @@ class SinaTokens extends ThemeExtension<SinaTokens> {
       disabledContent: disabledContent ?? this.disabledContent,
       disabledContainer: disabledContainer ?? this.disabledContainer,
       iconDim: iconDim ?? this.iconDim,
+      labelSection: labelSection ?? this.labelSection,
+      captionLg: captionLg ?? this.captionLg,
+      captionSm: captionSm ?? this.captionSm,
+      numberList: numberList ?? this.numberList,
+      numberStat: numberStat ?? this.numberStat,
     );
   }
 
@@ -213,6 +299,11 @@ class SinaTokens extends ThemeExtension<SinaTokens> {
         t,
       )!,
       iconDim: lerpDouble(iconDim, other.iconDim, t)!,
+      labelSection: TextStyle.lerp(labelSection, other.labelSection, t)!,
+      captionLg: TextStyle.lerp(captionLg, other.captionLg, t)!,
+      captionSm: TextStyle.lerp(captionSm, other.captionSm, t)!,
+      numberList: TextStyle.lerp(numberList, other.numberList, t)!,
+      numberStat: TextStyle.lerp(numberStat, other.numberStat, t)!,
     );
   }
 }
