@@ -34,11 +34,11 @@ ThemeData sinaLightTheme() {
         }),
         overlayColor: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.pressed)) {
-            return colorScheme.onSurface.withValues(
+            return colorScheme.onPrimary.withValues(
               alpha: sinaTokens.statePressed,
             );
           } else if (states.contains(WidgetState.hovered)) {
-            return colorScheme.onSurface.withValues(
+            return colorScheme.onPrimary.withValues(
               alpha: sinaTokens.stateHover,
             );
           }
@@ -89,11 +89,11 @@ ThemeData sinaDarkTheme() {
         }),
         overlayColor: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.pressed)) {
-            return colorScheme.onSurface.withValues(
+            return colorScheme.onPrimary.withValues(
               alpha: sinaTokens.statePressed,
             );
           } else if (states.contains(WidgetState.hovered)) {
-            return colorScheme.onSurface.withValues(
+            return colorScheme.onPrimary.withValues(
               alpha: sinaTokens.stateHover,
             );
           }
